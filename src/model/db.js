@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
-import settings from '../config/index'
+import settings from '../config/index.js'
 
 let client;
 
-const connect = async () => {
+const dbConnection = async () => {
   try {
     client = await mongoose.connect(settings.db.url);
     console.log('DB Connection successful');
@@ -11,6 +11,7 @@ const connect = async () => {
     console.log(`DB Connection Failed: ${error}`);
     process.exit(1);
   }
-};
+}
 
-export default connect;
+
+export default dbConnection;

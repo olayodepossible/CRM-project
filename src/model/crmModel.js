@@ -7,7 +7,7 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema(
   {
-    firsName: {
+    firstName: {
       type: String,
       required: true
     },
@@ -22,7 +22,7 @@ const Schema = mongoose.Schema(
       type: String,
     },
     phone: {
-      type: Number,
+      type: String,
     },
   },
   { timestamps: true }

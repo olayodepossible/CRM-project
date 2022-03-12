@@ -1,9 +1,13 @@
-import { addNewContact, getContacts } from "../controller/contactController";
+import { addNewContact, getContacts, getContact, updateContact } from "../controller/contactController.js";
 
 const routeSetup =  (app) => {
 
-    app.get('/', getContacts)
-    app.post('/', addNewContact)
+    app.get('/contact', getContacts)
+    app.post('/contact', addNewContact)
+    app.get('/contact/:contactId', getContact)
+    app.put('/contact/:contactId', updateContact)
+    app.delete('/contact/:contactId', updateContact)
+    
 }
 
-export default  routeSetup;
+export default routeSetup;
